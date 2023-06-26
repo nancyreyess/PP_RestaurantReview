@@ -1,4 +1,14 @@
-﻿/* Set padding to keep content from hitting the edges */
+﻿/* my edits: */
+
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #f7fce1;
+    color: #008080;
+}
+
+/* pre-set: */
+/* Set padding to keep content from hitting the edges */
 .body-content {
     margin-top: 15px;
     padding-left: 15px;
@@ -18,3 +28,5 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* --- */
