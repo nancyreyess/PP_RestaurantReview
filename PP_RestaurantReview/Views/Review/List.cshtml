@@ -9,7 +9,7 @@
 
 @foreach (var review in Model)
 {
-    <h2> <a href="/Review/Details/@review.ReviewId">@review.RestaurantName by @review.UserId on @review.ReviewDate</a></h2>
-    <div>@review.ReviewRating</div>
+    <h3> <a href="/Review/Details/@review.ReviewId">@review.RestaurantName by @review.UserId on @review.ReviewDate</a></h3>
+    <div>@review.ReviewRating / 5 </div>
     <div>@review.ReviewComment</div>
 }

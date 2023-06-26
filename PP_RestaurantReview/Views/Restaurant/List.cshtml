@@ -4,7 +4,7 @@
 }
 
 <h2>List of Restaurants</h2>
-<a href="/Restaurant/New"> New Restaurant </a>
+<a href="/Restaurant/New"> Add New Restaurant </a>
 @foreach (var restaurant in Model)
 {
     <h2><a href="/Restaurant/Details/@restaurant.RestaurantId"> @restaurant.RestaurantName </a></h2>

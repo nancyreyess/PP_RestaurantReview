@@ -5,9 +5,9 @@
 
 <h2> Cuisine List</h2>
 
-<a href="/Cuisine/New"> Add New Cuisine </a>
-
 @foreach (var cuisine in Model)
 {
-    <h2> <a href="/Cuisine/Details/@cuisine.CuisineId"> @cuisine.CuisineType</a></h2>
+    <h3><a href="/Cuisine/Details/@cuisine.CuisineId"> @cuisine.CuisineType</a></h3>
 }
+
+<a href="/Cuisine/New"> Add New Cuisine </a>

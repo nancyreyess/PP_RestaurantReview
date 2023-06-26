@@ -1,10 +1,42 @@
-﻿/* my edits: */
+﻿@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto+Slab&display=swap');
 
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background-color: #f7fce1;
+h1 {
+    font-family: 'Caprasimo', cursive;
+    color: #f7fec1;
+}
+
+h2, h3 {
+    font-family: 'Caprasimo', cursive;
     color: #008080;
+}
+
+h2 a, h3 a {
+    text-decoration: none;
+    color: #ffa500;
+}
+
+h2 a:hover, h3 a:hover {
+    color: #705d3d;
+}
+
+a {
+    color: #ffd700;
+    text-decoration: none;
+}
+
+a:hover {
+    color: ;
+}
+
+/* my edits: */
+.jumbotron {
+    background-color: #008080;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
 }
 
 /* pre-set: */
