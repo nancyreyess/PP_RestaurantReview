@@ -2,9 +2,7 @@
 ## Brunch Buds 
   This application allows users to browse brunch restaurants, post their own reviews and read reviews by others.
 ## Features
-  Browse list of restaurants and add, update, or delete a restaurant
-  Browse a list of reviews and add, update, or delete a review
-  Browse a list of cuisinse and add, update, or delete a cuisine
+  Three tables using Entity Framework - Restaurants, Reviews and Cuisines – that have full CRUD functionality for all of them. 
 ## Technologies Used
 - ASP.NET MVC
 - Entity Framework
