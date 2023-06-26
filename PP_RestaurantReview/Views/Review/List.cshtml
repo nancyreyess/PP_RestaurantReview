@@ -1,0 +1,15 @@
+﻿@model IEnumerable<PP_RestaurantReview.Models.ReviewDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List of Reviews</h2>
+
+<a href="/Review/New"> Add New Review </a>
+
+@foreach (var review in Model)
+{
+    <h2> <a href="/Review/Details/@review.ReviewId">@review.RestaurantName by @review.UserId on @review.ReviewDate</a></h2>
+    <div>@review.ReviewRating</div>
+    <div>@review.ReviewComment</div>
+}

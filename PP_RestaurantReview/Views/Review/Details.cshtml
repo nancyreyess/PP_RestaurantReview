@@ -1,0 +1,19 @@
+﻿@model PP_RestaurantReview.Models.ReviewDto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<a href="/Review/List">Go back to Review List</a>
+<br />
+<a href="/Review/Edit/@Model.ReviewId">Update</a>
+<br />
+<a style="color:#ab2020;" href="/Review/DeleteConfirm/@Model.ReviewId">Delete</a>
+
+
+<h2>@Model.RestaurantName by @Model.UserId</h2>
+<div> Date: @Model.ReviewDate</div>
+<div> Rating: @Model.ReviewRating /5</div>
+<div> Comment: @Model.ReviewComment</div>
+
+

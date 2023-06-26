@@ -1,0 +1,21 @@
+﻿@model PP_RestaurantReview.Models.CuisineDto
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Cuisine</h2>
+
+<form action="/Cuisine/Update/@Model.CuisineId" method="POST">
+    <div style="display:none;">
+        <input name="GenreID" type="text" value="@Model.CuisineId" />
+    </div>
+    <div>
+        <label>Cuisine Type:</label> <br />
+        <input name="CuisineType" type="text" value="@Model.CuisineType" />
+    </div>
+    <br />
+    <div>
+        <input type="submit" value="Update Cuisine" />
+    </div>
+</form>

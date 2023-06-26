@@ -1,0 +1,35 @@
+﻿@model IEnumerable<PP_RestaurantReview.Models.RestaurantDto>
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create Review</h2>
+
+<form action="/Review/Create" method="POST">
+    <div>
+        <label>UserId:</label> <input type="number" name="UserId" />
+    </div>
+    <div>
+        <label>Restaurant:</label>
+        <select name="RestaurantId">
+            @foreach (var restaurant in Model)
+            {
+                <option value="@restaurant.RestaurantId"> @restaurant.RestaurantName </option>
+            }
+        </select>
+    </div>
+    <div>
+        <label>Date:</label> <input type="date" name="ReviewDate" />
+    </div>
+    <div>
+        <label>Rating:</label> <input type="number" name="ReviewRating" />
+    </div>
+    <div>
+        <label>Comment:</label> <textarea name="ReviewComment"></textarea>
+    </div>
+
+    <div>
+        <input type="submit" value="Add Review" />
+    </div>
+</form>

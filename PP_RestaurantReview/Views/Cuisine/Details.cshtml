@@ -1,0 +1,31 @@
+﻿@model PP_RestaurantReview.Models.ViewModels.DetailsCuisine
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<a href="/Cuisine/List">Go back to list</a>
+<br />
+<a href="/Cuisine/Edit/@Model.SelectedCuisine.CuisineId">Update</a>
+<br />
+<a href="/Cuisine/DeleteConfirm/@Model.SelectedCuisine.CuisineId">Delete</a>
+<br />
+
+
+<h2> @Model.SelectedCuisine.CuisineType</h2>
+
+<div style="margin-top:100px;">
+    <h3> Restaurants related to this Cuisine </h3>
+
+    <br />
+
+    @foreach (var restaurant in Model.RelatedRestaurants)
+    {
+        <a href="/Review/Details/@restaurant.RestaurantId">@restaurant.RestaurantId</a>
+        <a href="/Review/Details/@restaurant.RestaurantId">@restaurant.RestaurantName</a>
+    }
+
+</div>
+
+<a href="/Restaurant/New"> Add Restaurant </a>
+

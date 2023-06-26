@@ -1,0 +1,15 @@
+﻿@model PP_RestaurantReview.Models.ReviewDto
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are you sure you want to delete this review?</h2>
+
+<a href="/Review/List">Cancel</a>
+
+<h3>@Model.RestaurantName by @Model.UserId on @Model.ReviewDate</h3>
+
+<form action="/Review/Delete/@Model.ReviewId" method="POST">
+    <input type="submit" value="Confirm Delete" />
+</form>

@@ -1,0 +1,13 @@
+﻿@model PP_RestaurantReview.Models.CuisineDto
+
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are you sure you want to delete this cuisine?</h2>
+<a href="/Cuisine/List">Cancel</a>
+<h2> @Model.CuisineType</h2>
+<form action="/Cuisine/Delete/@Model.CuisineId" method="POST">
+    <input type="submit" value="Confirm Delete" />
+</form>
+

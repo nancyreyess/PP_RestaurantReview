@@ -1,0 +1,35 @@
+﻿@model PP_RestaurantReview.Models.ViewModels.UpdateReview
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Update Review</h2>
+
+<form action="/Review/Update/@Model.SelectedReview.ReviewId" method="POST">
+    <div style="display:none;">
+        <<input type="text" name="ReviewId" value="@Model.SelectedReview.ReviewId"/>
+    </div>
+    <div>
+        <label>Restaurant:</label> <br />
+        <select name="RestaurantId">
+            @foreach (var restaurant in Model.RestaurantOptions)
+            {
+                <option value="@restaurant.RestaurantId" @(restaurant.RestaurantId == @Model.SelectedReview.RestaurantId ? "selected" : "")>@restaurant.RestaurantName</option>
+            }
+        </select>
+    </div>
+    <div>
+        <label>Date:</label> <input type="date" name="ReviewDate" value="@Model.SelectedReview.ReviewDate" />
+    </div>
+    <div>
+        <label>Rating:</label> <input type="number" name="ReviewRating" value="@Model.SelectedReview.ReviewRating" />
+    </div>
+    <div>
+        <label>Comment:</label> <textarea name="ReviewComment" value="@Model.SelectedReview.ReviewComment"></textarea>
+    </div>
+    <div>
+        <input type="submit" value="Update Review" />
+    </div>
+</form>
+
+
