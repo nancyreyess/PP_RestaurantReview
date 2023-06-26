@@ -20,7 +20,7 @@ namespace PP_RestaurantReview.Models
         public int RestaurantId { get; set; }
         public virtual Restaurant Restaurant { get; set; }
 
-        //needs to become a fk to the applicationUser?
+        //needs to change to a ForeignKey from ApplicationUser
         public int UserId { get; set; }
         
     }
